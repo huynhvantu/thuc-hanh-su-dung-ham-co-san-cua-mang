@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Chuyển chữ thường thành chữ hoa trong chuỗi</title>
+</head>
+<body>
+	<script>
+		var kitu = prompt();
+		document.write(kitu);		
+		var str = kitu.toString();
+		var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+		var result = [];
+
+		for(var x = 0; x<str.length; x++){
+			if(UPPER.indexOf(str[x]) !== -1){
+				result.push(str[x].toLowerCase());
+			}else if(LOWER.indexOf(str[x]) !== -1){
+				result.push(str[x].toUpperCase());
+			}else{
+				result.push(str[x]);
+			}
+		}
+		document.write('<br/>');
+		document.write(result.join(''));		
+	</script>
+</body>
+</html>
